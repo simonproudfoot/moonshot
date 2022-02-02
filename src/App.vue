@@ -53,7 +53,7 @@
                     <line class="st1" x1="28.2" y1="13.7" x2="13.7" y2="28.2" />
                 </g>
             </svg>
-            <div class="window__wrapper window__wrapper--main" style="">
+            <div class="window__wrapper window__wrapper--main">
                 <div class="window__wrapper__content">
                     <div class="window__wrapper__content__foot">
                         <div class="d-block" style="margin-left: -10px">
@@ -65,17 +65,17 @@
                             </a>
                         </div>
 
-                        <small class="text-light" style="opacity: 0.5">Copyright &copy; {{new Date().getFullYear()}} Moonshot Web Studio Ltd. All Rights Reserved. Company Number 13874590.</small>
+                        <small class="text-light" style="opacity: 0.4; display: block; line-height: 15px;"> Company Number 13874590.<br />Copyright &copy; {{new Date().getFullYear()}} Moonshot Web Studio Ltd. All Rights Reserved.</small>
                     </div>
-                    <div class="socialHud">
+                    <div class="socialHud my-5">
                         <div class="row align-items-center">
                             <div class="col-4">
                                 <img src="./assets/logo.svg" width="172" height="35" />
                             </div>
                         </div>
                     </div>
-                    <h1 class="titletext mt-5 mb-sm-0">SPACE AGE WEB <br />TECHNOLOGY</h1>
-                    <p class="my-5 introText">
+                    <h1 class="titletext mb-sm-0">SPACE AGE WEB <br />TECHNOLOGY</h1>
+                    <p class="mb-5 mt-0 mt-md-5 introText">
                         <span v-html="content.introOne"></span>
 
                         <span v-show="!about" @click="openAbout" class="text-red blinkingText ml-2" style="cursor: pointer">READ_MORE</span>

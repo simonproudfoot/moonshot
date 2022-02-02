@@ -91,40 +91,7 @@
             }
         ]
     },
-    {
-        "id": "streetPoem",
-        "title": "MIF/Underworld:<br/> Manchester street poem",
-        "category": "design & developement",
-        "titleCols": "col-md-6",
-        "video": "255381266",
-        "content": "Manchester Street Poem was an event that started in the 2017 festival and continues till today. Conceived by Karl Hyde and Rick Smith from the electronic music group Underworld, Manchester Street Poem tells the story's of Manchester's homeless in their own voice through music and art. ",
-        "items": [
-            {
-                "image": "stpoem3.jpg",
-                "caption": "",
-                "side": "left",
-                "video": "",
-                "alt": "",
-                "cols": ""
-            },
-            {
-                "image": "stpoem2.jpg",
-                "caption": "Interactive immersize storytelling: ",
-                "side": "right",
-                "video": "",
-                "alt": "",
-                "cols": ""
-            },
-            {
-                "image": "stpoem.jpg",
-                "caption": "Live streaming of event",
-                "side": "right",
-                "video": "",
-                "alt": "",
-                "cols": ""
-            }
-        ]
-    },
+    
     {
         "id": "mif",
         "title": "Manchester International Festival",

@@ -8,7 +8,7 @@
                 </p>
             </div>
         </div>
-        <div v-for="(icon, i) in content.services" :key="i" class="col-4 col-sm-4 mb-4">
+        <div v-for="(icon, i) in content.services" :key="i" class="col-6 col-sm-4 mb-4">
             <div class="service-icon text-center">
                 <img :src="require(`../assets/SVG/Asset`+icon.icon+'.svg')">
                 <p class="text-white title d-block mt-3" style="line-height: 19px">{{icon.title}}</p>

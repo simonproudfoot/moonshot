@@ -13,67 +13,68 @@
                 </g>
             </svg>
             <div class="pt-5">
-                    <div class="row">
-                        <div class="col-8">
-                            <h1 :class="deviceSize == 'mobile' ? 'h2' : null">SEND SUBSPACE <br />COMMUNICATION</h1>
-                        </div>
-                        <div class="col-4">
-                            <div id="soundwave">
-                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="200px" height="50px" viewBox="0 0 24 30" style="enable-background: new 0 0 50 50" xml:space="preserve">
-                                    <rect x="0" y="13" width="2" height="5" fill="#fff">
-                                        <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0s" dur="01" repeatCount="indefinite" />
-                                        <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0s" dur="0.6s" repeatCount="indefinite" />
-                                    </rect>
-                                    <rect x="10" y="13" width="2" height="50" fill="#fff">
-                                        <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
-                                        <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
-                                    </rect>
-                                    <rect x="20" y="13" width="2" height="50" fill="#fff">
-                                        <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
-                                        <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
-                                    </rect>
-                                    <rect x="20" y="13" width="2" height="50" fill="#fff">
-                                        <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
-                                        <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
-                                    </rect>
-                                    <rect x="30" y="13" width="2" height="50" fill="#fff">
-                                        <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
-                                        <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.20s" dur="0.6s" repeatCount="indefinite" />
-                                    </rect>
-                                    <rect x="40" y="13" width="2" height="50" fill="#fff">
-                                        <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
-                                        <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
-                                    </rect>
-                                    <rect x="50" y="13" width="2" height="10" fill="#fff">
-                                        <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
-                                        <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
-                                    </rect>
-                                    <rect x="60" y="13" width="2" height="50" fill="#fff">
-                                        <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
-                                        <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
-                                    </rect>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="col-12 mb-5">
-                            <p>If you have a project in mind or just want to say hello. Please fill in the form below. Please give as much detail about your project as possible</p>
+                <div class="row">
+                    <div class="col-8">
+                        <h1 :class="deviceSize == 'mobile' ? 'h2' : null">SEND SUBSPACE <br />COMMUNICATION</h1>
+                    </div>
+                    <div class="col-4">
+                        <div id="soundwave">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="200px" height="50px" viewBox="0 0 24 30" style="enable-background: new 0 0 50 50" xml:space="preserve">
+                                <rect x="0" y="13" width="2" height="5" fill="#fff">
+                                    <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0s" dur="01" repeatCount="indefinite" />
+                                    <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0s" dur="0.6s" repeatCount="indefinite" />
+                                </rect>
+                                <rect x="10" y="13" width="2" height="50" fill="#fff">
+                                    <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                                    <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                                </rect>
+                                <rect x="20" y="13" width="2" height="50" fill="#fff">
+                                    <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                                    <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                                </rect>
+                                <rect x="20" y="13" width="2" height="50" fill="#fff">
+                                    <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                                    <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                                </rect>
+                                <rect x="30" y="13" width="2" height="50" fill="#fff">
+                                    <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                                    <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.20s" dur="0.6s" repeatCount="indefinite" />
+                                </rect>
+                                <rect x="40" y="13" width="2" height="50" fill="#fff">
+                                    <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                                    <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                                </rect>
+                                <rect x="50" y="13" width="2" height="10" fill="#fff">
+                                    <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                                    <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                                </rect>
+                                <rect x="60" y="13" width="2" height="50" fill="#fff">
+                                    <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                                    <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                                </rect>
+                            </svg>
                         </div>
                     </div>
-                    <form name="contact" method="POST" @submit.prevent="sendEmail" autocomplete="off">
-                        <input v-model="form.name" label="Email" type="text" placeholder="NAME" name="name" class="mb-4">
-                        <input v-model="form.email" type="email" placeholder="EMAIL_ADDRESS" name="email" class="mb-4">
-                        <textarea v-model="form.message" name="message" id="" cols="30" rows="5" placeholder="MESSAGE" class="mb-4"> </textarea>
-                        <input v-model="form.budget" type="text" placeholder="Project budget" name="budget" class="mb-4">
-                        <button class="text-red  sendBtn mt-5" value="transmit" :class="!valid ? 'btnInactive' : 'blinkingText'">TRANSMIT</button>
-                    </form>
+                    <div class="col-12 mb-5">
+                        <p>If you have a project in mind or just want to say hello. Please fill in the form below. Please give as much detail about your project as possible</p>
+                    </div>
                 </div>
+                <form name="contact" method="POST" @submit.prevent="sendEmail" autocomplete="off">
+                    <input v-model="form.name" label="Email" type="text" placeholder="NAME" name="name" class="mb-4">
+                    <input v-model="form.email" type="email" placeholder="EMAIL_ADDRESS" name="email" class="mb-4">
+                    <textarea v-model="form.message" name="message" id="" cols="30" rows="5" placeholder="MESSAGE" class="mb-4"> </textarea>
+                    <input v-model="form.budget" type="text" placeholder="Project budget" name="budget" class="mb-4">
+                    <button class="text-red  sendBtn mt-5" value="transmit" :class="!valid ? 'btnInactive' : 'blinkingText'">TRANSMIT</button>
+                </form>
             </div>
-            <Smallgraph />
-            <pulseBar />
         </div>
+        <Smallgraph />
+        <pulseBar />
     </div>
 </div>
+</div>
 </template>
+
 <script>
 import emailjs from 'emailjs-com';
 import Smallgraph from './smallgraph.vue';
@@ -107,6 +108,7 @@ export default {
             this.$set(this.form, 'name', '');
             this.$set(this.form, 'email', '');
             this.$set(this.form, 'message', '');
+            this.$set(this.form, 'budget', '');
         },
         sendEmail(e) {
             if (this.valid) {
@@ -118,6 +120,7 @@ export default {
                         'user_B7EKHc1Amf3PSsjQGLczR', {
                             name: this.name,
                             email: this.email,
+                            budget: this.budget,
                             message: this.message
                         })
                 } catch (error) {
@@ -136,6 +139,7 @@ export default {
     }
 };
 </script>
+
 <style>
 .btnInactive {
     opacity: 0.5 !important;

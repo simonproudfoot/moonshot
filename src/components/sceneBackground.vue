@@ -123,6 +123,7 @@ export default {
             });
         },
         loadMoon() {
+            //   alert(this.container.clientWidth)
             this.loader.load(this.moonModel, (gltf) => {
                 this.moon = gltf.scene;
                 this.scene.add(this.moon);
@@ -143,6 +144,7 @@ export default {
         windowsOpen: {
             deep: true,
             handler(val) {
+                var satPos = this.container.clientWidth > 800 ? 6 : 3
                 if (val.portfolio) {
                     gsap.to(this.moon.position, { x: 0, y: -6, z: 3, duration: 2 });
                     if (this.satelite) {
@@ -150,9 +152,16 @@ export default {
                     }
                 }
                 if (val.contact) {
-                    gsap.to(this.moon.position, { x: -15, y: 0, z: 0, duration: 2 });
+
                     if (this.satelite) {
-                        this.satelite ? gsap.to(this.satelite.position, { x: 6, duration: 2 }) : null
+                        gsap.to(this.moon.position, { x: -15, y: 0, z: 0, duration: 2 });
+                        this.satelite ? gsap.to(this.satelite.position, { x: satPos, duration: 2 }) : null
+                    } else {
+                        setTimeout(() => {
+                            gsap.to(this.moon.position, { x: -15, y: 0, z: 0, duration: 2 });
+                            this.satelite ? gsap.to(this.satelite.position, { x: satPos, duration: 2 }) : null
+                        }, 3000);
+
                     }
                 }
                 if (!val.contact && !val.portfolio && !val.about) {

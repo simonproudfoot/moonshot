@@ -825,8 +825,7 @@ figure,
 .socialHud {
   max-width: 521px;
   @media (min-width: 992px) {
-    height: 17vh;
-    min-height: 101px;
+    height: auto;
   }
   @media (max-width: 992px) {
     padding: 40px 0;
