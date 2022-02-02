@@ -1,0 +1,314 @@
+[
+    {
+        "id": "quickblocs",
+        "title": "Quikblocs",
+        "category": "design & developement",
+        "video": "",
+        "titleCols": "col-md-6",
+        "content": "Quikblocs is both a cloud based headless CMS and Website builder and hosting solution that alows users to either create and manage the content for their self built and hosted websites or build and host their sites using pre-built content blocks and templates. Beta launching soon.",
+        "items": [
+            {
+                "image": "qb-inline.png",
+                "caption": "Inline editor.",
+                "side": "left",
+                "video": "",
+                "alt": "",
+                "cols": ""
+            },
+            {
+                "image": "qb-admin.png",
+                "side": "right",
+                "caption": "Admin panel view for headless CMS",
+                "alt": "",
+                "video": "",
+                "cols": ""
+            },
+            {
+                "image": "qb-unsplash.png",
+                "side": "right",
+                "caption": "Search from thousands of free images and add them into your page elements",
+                "alt": "",
+                "video": "",
+                "cols": ""
+            },
+            {
+                "image": "qb-projects.png",
+                "side": "left",
+                "caption": "All of your web projects in one place.",
+                "alt": "",
+                "video": "",
+                "cols": ""
+            },
+            {
+                "image": "qb-blocs.png",
+                "side": "right",
+                "caption": "Growing library of pre-made design blocks",
+                "alt": "",
+                "video": "",
+                "cols": ""
+            }
+        ]
+    },
+    {
+        "id": "golf",
+        "title": "R&A World Golf Museum",
+        "category": "developement",
+        "titleCols": "col-md-6",
+        "video": "",
+        "content": "<b>Designs, installations and concepts by <a class='text-red' rel='nofollow' href='https://fuzzyduck.co.uk/'>Fuzzy Duck</a></b></br>",
+        "items": [
+            {
+                "image": "golf1.jpg",
+                "caption": "Six interactive touchscreen totems that are wirelessley linked using websockets. Every 20 minutes these simultaniously switch to video mode whilst a feature film is played on the large screen",
+                "side": "right",
+                "video": "",
+                "alt": "",
+                "cols": ""
+            },
+            {
+                "image": "golf2.jpg",
+                "caption": "Touch screen games.",
+                "side": "left",
+                "video": "",
+                "alt": "",
+                "cols": ""
+            },
+            {
+                "image": "golf3.jpg",
+                "caption": "Animated reception screen, with updatable CMS for opening times etc",
+                "side": "left",
+                "video": "",
+                "alt": "",
+                "cols": ""
+            },
+            {
+                "image": "golf4.jpg",
+                "caption": "",
+                "side": "right",
+                "video": "",
+                "alt": "",
+                "cols": ""
+            }
+        ]
+    },
+    {
+        "id": "streetPoem",
+        "title": "MIF/Underworld:<br/> Manchester street poem",
+        "category": "design & developement",
+        "titleCols": "col-md-6",
+        "video": "255381266",
+        "content": "Manchester Street Poem was an event that started in the 2017 festival and continues till today. Conceived by Karl Hyde and Rick Smith from the electronic music group Underworld, Manchester Street Poem tells the story's of Manchester's homeless in their own voice through music and art. ",
+        "items": [
+            {
+                "image": "stpoem3.jpg",
+                "caption": "",
+                "side": "left",
+                "video": "",
+                "alt": "",
+                "cols": ""
+            },
+            {
+                "image": "stpoem2.jpg",
+                "caption": "Interactive immersize storytelling: ",
+                "side": "right",
+                "video": "",
+                "alt": "",
+                "cols": ""
+            },
+            {
+                "image": "stpoem.jpg",
+                "caption": "Live streaming of event",
+                "side": "right",
+                "video": "",
+                "alt": "",
+                "cols": ""
+            }
+        ]
+    },
+    {
+        "id": "mif",
+        "title": "Manchester International Festival",
+        "category": "design & developement",
+        "titleCols": "col-md-6",
+        "video": "351615174",
+        "content": "The Manchester International Festival is a bi-annual festival featuring performances from artists such as Idris Elba, Skepta, Janelle Monáe, David Lynch and Yoko Ono. Over two festivals the project included creating websites with a wide array or uses from ticket booking, interactive show experiences, internal intranet and social web app, event promotion and custom made CMS built on Wordpress",
+        "items": [
+            {
+                "image": "mif-booking.jpg",
+                "caption": "Event info and ticket booking system Combining a custom WordPress backend with the Spektrix API.",
+                "alt": "",
+                "video": "",
+                "cols": "",
+                "side": "left"
+            },
+            {
+                "image": "mifhub.jpg",
+                "caption": "Design and build of internal web services such as social media intranet.",
+                "video": "",
+                "alt": "",
+                "cols": "",
+                "side": "right"
+            },
+            {
+                "image": "mif19-a.jpg",
+                "caption": "2019 Pre-ticket release",
+                "video": "",
+                "alt": "",
+                "cols": "",
+                "side": "right"
+            },
+            {
+                "image": "mif.gif",
+                "caption": "2019 Fesival square page",
+                "video": "",
+                "alt": "",
+                "cols": "",
+                "side": "right"
+            }
+        ]
+    },
+    {
+        "id": "streePoem",
+        "title": "MIF/Underworld:<br/> Manchester street poem",
+        "category": "design & developement",
+        "titleCols": "col-md-6",
+        "video": "255381266",
+        "content": "Manchester Street Poem was an event that started in the 2017 festival and continues till today. Conceived by Karl Hyde and Rick Smith from the electronic music group Underworld, Manchester Street Poem tells the story's of Manchester's homeless in their own voice through music and art. ",
+        "items": [
+            {
+                "image": "stpoem3.jpg",
+                "caption": "",
+                "side": "left",
+                "video": "",
+                "alt": "",
+                "cols": ""
+            },
+            {
+                "image": "stpoem2.jpg",
+                "caption": "Interactive immersize storytelling: ",
+                "side": "right",
+                "video": "",
+                "alt": "",
+                "cols": ""
+            },
+            {
+                "image": "stpoem.jpg",
+                "caption": "Live streaming of event",
+                "side": "right",
+                "video": "",
+                "alt": "",
+                "cols": ""
+            }
+        ]
+    },
+    {
+        "id": "FutureSessions",
+        "title": "Future sessions",
+        "category": "design & developement",
+        "titleCols": "col-md-6",
+        "video": "513838586",
+        "content": "Future Sessions is an event hosted by Future Everything based around art and technology. For this project, I used tech elements, animations and glitches to create a design that fit with their existing brand, yet gave the event its own unique online identity.",
+        "items": [
+            {
+                "image": "fs2.jpg",
+                "caption": "Built on WordPress, the site features a backend that allows the content team to easily add, pages, posts, change menu options, add artists and add booking information.",
+                "side": "left",
+                "video": "",
+                "alt": "",
+                "cols": ""
+            }
+        ]
+    },
+    {
+        "id": "music",
+        "title": "Music for a Busy City",
+        "category": "design & developement",
+        "titleCols": "col-md-6",
+        "video": "218760998",
+        "content": "Music for a Busy City was a project that featured new music, from composers Anna Meredith, Matthew Herbert, Mohammed Fairouz, Huang Ruo, Olga Neuwirth, Philip Venables in various locations around the city.",
+        "items": [
+            {
+                "image": "music1.jpg",
+                "caption": "",
+                "side": "right",
+                "video": "",
+                "alt": "",
+                "cols": ""
+            },
+            {
+                "image": "music2.jpg",
+                "caption": "These pre-recorded pieces played on rotation every hour. Audiences could use the interactive map to plan their journey and hear each one",
+                "side": "left",
+                "video": "",
+                "alt": "",
+                "cols": ""
+            },
+            {
+                "image": "music4.jpg",
+                "caption": "By clicking on the locations, users would be transported to the location virtually allowing them to hear the music and be in the space they were created for using a VR headset or their phone.",
+                "side": "left",
+                "video": "",
+                "alt": "",
+                "cols": ""
+            },
+            {
+                "image": "vr.png",
+                "caption": "",
+                "side": "right",
+                "video": "",
+                "alt": "",
+                "cols": ""
+            },
+            {
+                "image": "music5.jpg",
+                "caption": "Detailed content about each composer and their music",
+                "side": "right",
+                "video": "",
+                "alt": "",
+                "cols": ""
+            }
+        ]
+    },
+    {
+        "id": "JustEco",
+        "title": "Just Eco",
+        "category": "design & developement",
+        "titleCols": "col-md-6",
+        "video": "",
+        "content": "Branding, animation, web page and illustrations for Justeco.co.uk. The aim of the project is to attract a wide demo graph of possible customers for free boiler installations. I tried to make the site as simple as and inviting as possible. I built the site on Wordpress and made a dynamic application form with jQuery that guides the user through the questions as quickly as possible to improve on conversion rates.",
+        "items": [
+            {
+                "image": "eco1.jpg",
+                "caption": "Built on WordPress, the site features a backend that allows the content team to easily add, pages, posts, change menu options, add artists and add booking information.",
+                "side": "right",
+                "video": "",
+                "alt": "",
+                "cols": ""
+            },
+            {
+                "image": "boiler.jpg",
+                "caption": "3D Vector base images",
+                "side": "left",
+                "video": "",
+                "alt": "",
+                "cols": ""
+            },
+            {
+                "image": "box.png",
+                "caption": "Interactive SVG elements",
+                "side": "right",
+                "video": "",
+                "alt": "",
+                "cols": ""
+            },
+            {
+                "image": "gauge.jpg",
+                "caption": "Animations",
+                "side": "left",
+                "video": "",
+                "alt": "",
+                "cols": ""
+            }
+        ]
+    }
+]

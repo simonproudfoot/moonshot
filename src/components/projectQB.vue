@@ -1,32 +1,21 @@
 <template>
 <div class="porfolioWindow__inner">
     <div class="row">
-        <div class="col-12 pb-3 px-0 active">
-            <div class="d-lg-none">
-            <h1>QUIKBLOCS</h1>
-            </div>
-           
+        <div class="col-6 pb-2">
+            <portfolioTitle :title="'Manchester International Festival'" :id="34532" :caption="`For over three years I worked as the in-house developer for the Manchester International Festival. A bi-annual festival featuring performances from artists such as Idris Elba, Skepta, Janelle Monáe, David Lynch and Yoko Ono. Here I was solely responsible for the build and upkeep of the festivals' websites. Including the main site which is used by millions of users each year to book tickets, volunteer, get involved with year-round community projects and more.`" />
+            <portfolioImage :imageUlr="'qb.jpg'" :imageAlt="'Quickblocs design'" :caption="'Commig soon'" :id="15435" />
         </div>
-        <div class="col-12 pb-2 px-0">
-          <!--  <figure>
-             <img src="../assets/portfolio/qb.jpg" alt="" class="mb-3" @load="$emit('imgRdy')">
-            </figure>
-             <ul class="aniBars">
-                <li><strong >URL:</strong><span><a class="text-white" href="https://mif.co.uk">IN DEVELOPMENT</a></span></li>
-                <li><strong >Server side:</strong><span>Firebase</span></li>
-                <li><strong >Front end:</strong>Vue.js, Nuxt, Vuetify</li>
-            </ul>
-            <p>
-
-
-Quikblocs is cloud based headless CMS solution that lets users manage the content and layout for all of their websites from one easy to use playform and download free starter theme templates for varous web frameworks. Written and designed completely by myself i'm hoping to have this ready for Beta testing soon.
-            </p>-->
-        </div> 
+        <div class="col-6 pb-2">
+            <portfolioImage :imageUlr="'qb.jpg'" :imageAlt="'Quickblocs design'" :caption="'Commig sooner than fdsfds'" :id="23453" />
+        </div>
     </div>
 </div>
 </template>
 <script>
+import portfolioImage from './portfolioImage.vue';
+import portfolioTitle from './portfolioTitle.vue';
 export default {
+    components: { portfolioImage, portfolioTitle },
     name: "projectQB",
 };
 </script>

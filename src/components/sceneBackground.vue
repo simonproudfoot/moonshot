@@ -30,7 +30,16 @@ export default {
         };
     },
     methods: {
-
+        setTheSize() {
+            //  this.renderer.setSize(this.container.clientWidth, this.container.clientHeight);
+            this.camera.aspect = this.container.clientWidth / this.container.clientHeight;
+            this.camera.updateProjectionMatrix();
+            this.renderer.setSize(
+                this.container.clientWidth,
+                this.container.clientHeight
+            );
+            this.render()
+        },
         init() {
             // set container
             this.container = this.$refs.sceneContainer;
@@ -59,10 +68,7 @@ export default {
 
             // create renderer
             this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-            this.renderer.setSize(
-                this.container.clientWidth,
-                this.container.clientHeight
-            );
+            this.setTheSize
             this.renderer.setPixelRatio(window.devicePixelRatio);
             this.renderer.gammaFactor = 2.2;
             this.renderer.outputEncoding = THREE.sRGBEncoding;
@@ -134,27 +140,39 @@ export default {
                 this.loadSatelite()
             })
         },
-
         windowsOpen: {
             deep: true,
             handler(val) {
                 if (val.portfolio) {
                     gsap.to(this.moon.position, { x: 0, y: -6, z: 3, duration: 2 });
-                    gsap.to(this.satelite.position, { x: 18, duration: 2 })
+                    if (this.satelite) {
+                        gsap.to(this.satelite.position, { x: 18, duration: 2 })
+                    }
                 }
                 if (val.contact) {
                     gsap.to(this.moon.position, { x: -15, y: 0, z: 0, duration: 2 });
-                    this.satelite ? gsap.to(this.satelite.position, { x: 6, duration: 2 }) : null
+                    if (this.satelite) {
+                        this.satelite ? gsap.to(this.satelite.position, { x: 6, duration: 2 }) : null
+                    }
                 }
                 if (!val.contact && !val.portfolio && !val.about) {
                     gsap.to(this.moon.position, { x: 4, y: 0, z: 0, duration: 2 });
-                    gsap.to(this.satelite.position, { x: 18, duration: 2 })
+                    if (this.satelite) {
+                        gsap.to(this.satelite.position, { x: 18, duration: 2 })
+                    }
                 }
             },
         },
     },
+    created() {
+        window.addEventListener("resize", this.setTheSize);
+    },
+    destroyed() {
+        window.removeEventListener("resize", this.setTheSize);
+    },
     mounted() {
         this.init();
+
     },
 };
 </script>

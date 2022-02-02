@@ -11,7 +11,7 @@
                 <small v-else>THANK YOU!</small></p>
         </div>
     </div>
-    <vimeoplayer v-if="vimeoWind" :id="vimeoID" v-on:closeVid="toggleVimeo()" v-on:vidready="vready" />
+
     <transition name="fade">
         <div v-if="page == 'mainPanel'" class="back-s">HOME</div>
     </transition>
@@ -37,7 +37,8 @@
                     </g>
                 </svg>
                 <div class="window__wrapper__content">
-                    <windowAbout />
+
+                    <windowAbout :content="content" />
                 </div>
             </div>
         </div>
@@ -52,54 +53,32 @@
                     <line class="st1" x1="28.2" y1="13.7" x2="13.7" y2="28.2" />
                 </g>
             </svg>
-            <div class="window__wrapper">
+            <div class="window__wrapper window__wrapper--main" style="">
                 <div class="window__wrapper__content">
+                    <div class="window__wrapper__content__foot">
+                        <div class="d-block" style="margin-left: -10px">
+                            <a href="https://www.instagram.com/moonshot_web_studio/" class="socialIcon mr-1 d-inline-block">
+                                <img src="./assets/social2.svg" :width="(screenWidth = 'desktop' ? 30 : 48)" height="48" />
+                            </a>
+                            <a href="https://www.behance.net/simonproudfoot" class="socialIcon d-inline-block">
+                                <img src="./assets/behance.svg" :width="(screenWidth = 'desktop' ? 30 : 48)" height="48" />
+                            </a>
+                        </div>
+
+                        <small class="text-light" style="opacity: 0.5">Copyright &copy; {{new Date().getFullYear()}} Moonshot Web Studio Ltd. All Rights Reserved. Company Number 13874590.</small>
+                    </div>
                     <div class="socialHud">
                         <div class="row align-items-center">
-
                             <div class="col-4">
                                 <img src="./assets/logo.svg" width="172" height="35" />
                             </div>
-
-                            <div class="col-3 offset-5">
-                                <a href="https://www.instagram.com/simonproudfoot/" class="socialIcon mr-1 d-inline-block">
-                                    <img src="./assets/social2.svg" :width="(screenWidth = 'desktop' ? 30 : 48)" height="48" />
-                                </a>
-                                <a href="https://www.behance.net/simonproudfoot" class="socialIcon d-inline-block">
-                                    <img src="./assets/behance.svg" :width="(screenWidth = 'desktop' ? 30 : 48)" height="48" />
-                                </a>
-                            </div>
-
-                            <!-- <div class="offset-4 col-2 d- d-sm-block">
-                                vue.js
-                                <br /> gsap.js
-                            </div>
-                            <div class="offset-8 col-4 d-none d-sm-block">
-                                <p>
-                                    x{{ x }} y{{ y }} <br />
-                                    <span v-on:moustmove.stop.preve="dummy"></span>
-                                </p>
-                            </div> -->
-                        </div>
-                        <div class="row">
-                            <!-- <div class="col-2 offset-8 d-none d-sm-block ">
-                                <h3><small>v6</small></h3>
-                            </div> -->
-                            <!-- <div class="col-6" style="margin-left: -0.8em">
-                                <a href="https://www.instagram.com/simonproudfoot/" class="socialIcon mr-1 d-inline-block">
-                                    <img src="./assets/social2.svg" :width="(screenWidth = 'desktop' ? 30 : 48)" height="48" />
-                                </a>
-                                <a href="https://www.behance.net/simonproudfoot" class="socialIcon d-inline-block">
-                                    <img src="./assets/behance.svg" :width="(screenWidth = 'desktop' ? 30 : 48)" height="48" />
-                                </a>
-                            </div> -->
                         </div>
                     </div>
-                    <h1 class="titletext">CREATIVE WEB <br />TECHNOLOGIES</h1>
-
+                    <h1 class="titletext mt-5 mb-sm-0">SPACE AGE WEB <br />TECHNOLOGY</h1>
                     <p class="my-5 introText">
-                        I am a web developer with almost a decade of experience building creative websites and complex web apps, mainly using Vue.js, Laravel, WordPress, and jQuery.
-                        <span v-show="!about" @click="openAbout" class="text-red blinkingText" style="cursor: pointer">READ_MORE</span>
+                        <span v-html="content.introOne"></span>
+
+                        <span v-show="!about" @click="openAbout" class="text-red blinkingText ml-2" style="cursor: pointer">READ_MORE</span>
                     </p>
                     <button @click="openPortfolio()" class="mainBtn d-inline mr-3" :class="page == 'portfolioMenu' ? 'btn--active' : null">
                         WORK
@@ -110,14 +89,14 @@
                     <smallgraph />
                     <pulseBar />
                     <div ref="about" v-show="about && outerWidth > 576" class="about py-3 px-4">
-                        <windowAbout />
+                        <windowAbout :content="content" />
                     </div>
                 </div>
             </div>
             <span class="window__chevs"></span>
         </div>
         <div ref="portfolioMenu" class="window portfolioMenu">
-            <svg @click="closePortfolio" version="1.1" id="closeb" v-if="!vimeoWind" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 41.8 41.8" style="enable-background: new 0 0 41.8 41.8" xml:space="preserve">
+            <svg @click="closePortfolio" version="1.1" id="closeb" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 41.8 41.8" style="enable-background: new 0 0 41.8 41.8" xml:space="preserve">
                 <g id="circle" transform="translate(0, 0)">
                     <ellipse transform="matrix(1 -4.136431e-03 4.136431e-03 1 -8.630285e-02 8.666051e-02)" class="st0" cx="20.9" cy="20.9" rx="20.4" ry="20.4" />
                 </g>
@@ -129,57 +108,19 @@
             <span class="window__chevs"></span>
             <div class="window__wrapper">
                 <div class="window__wrapper__content">
-                    <div class="portfolio-list" ref="portfolio-list">
-                        <li class="portfolio-list__item" :class="currentProject == 'quikblocs' ? 'activeItem' : null" ref="1" @click="openProject('quikblocs')">
+                    <div class="portfolio-list mt-5 mb-sm-0" ref="portfolio-list">
+                        <li v-for="(item, i) in projects" :key="i" class="portfolio-list__item" :class="currentProject == item.id ? 'activeItem' : null" :ref="i" @click="openProject(item.id)">
                             <div class="portfolio-list__item__inner">
-                                <h5 class="text-green mb-0">DESIGN & DEVELOPMENT</h5>
-                                <h3 :class="deviceSize == 'mobile' ? 'h4' : null">QUIKBLOCS APP</h3>
-                            </div>
-                        </li>
-                        <li class="portfolio-list__item" :class="
-                                      currentProject == 'futuresessions' ? 'activeItem' : null
-                                    " ref="1" @click="openProject('futuresessions')">
-                            <div class="portfolio-list__item__inner">
-                                <h5 class="text-green mb-0">DESIGN & DEVELOPMENT</h5>
-                                <h3 :class="deviceSize == 'mobile' ? 'h4' : null">FUTURE EVERYTHING:<br />FUTURE SESSIONS</h3>
-                            </div>
-                        </li>
-                        <li class="portfolio-list__item" :class="currentProject == 'mif' ? 'activeItem' : null" ref="1" @click="openProject('mif')">
-                            <div class="portfolio-list__item__inner">
-                                <h5 class="text-green mb-0">DEVELOPMENT</h5>
-                                <h3 :class="deviceSize == 'mobile' ? 'h4' : null">MANCHESTER INTERNATIONAL<br />FESTIVAL</h3>
-                            </div>
-                        </li>
-                        <li class="portfolio-list__item" :class="currentProject == 'music' ? 'activeItem' : null" ref="1" @click="openProject('music')">
-                            <div class="portfolio-list__item__inner">
-                                <h5 class="text-green mb-0">DESIGN & DEVELOPMENT</h5>
-                                <h3 :class="deviceSize == 'mobile' ? 'h4' : null">MIF: MUSIC FOR A BUSY CITY</h3>
-                            </div>
-                        </li>
-                        <li class="portfolio-list__item" :class="currentProject == 'poem' ? 'activeItem' : null" ref="1" @click="openProject('poem')">
-                            <div class="portfolio-list__item__inner">
-                                <h5 class="text-green mb-0">DESIGN & DEVELOPMENT</h5>
-                                <h3 :class="deviceSize == 'mobile' ? 'h4' : null">MIF/UNDERWORLD:<br />MANCHESTER STREET POEM</h3>
-                            </div>
-                        </li>
-                        <li class="portfolio-list__item" :class="currentProject == 'eco' ? 'activeItem' : null" ref="1" @click="openProject('eco')">
-                            <div class="portfolio-list__item__inner">
-                                <h5 class="text-green mb-0">DESIGN & DEVELOPMENT</h5>
-                                <h3 :class="deviceSize == 'mobile' ? 'h4' : null">JUST ECO</h3>
-                            </div>
-                        </li>
-                        <li class="portfolio-list__item" :class="currentProject == 'gallery' ? 'activeItem' : null" ref="1" @click="openProject('gallery')">
-                            <div class="portfolio-list__item__inner">
-                                <h5 class="text-green mb-0">ARTWORK & ILLUSTRATION</h5>
-                                <h3 :class="deviceSize == 'mobile' ? 'h4' : null">GALLERY</h3>
+                                <h5 class="text-green mb-0 text-uppercase">{{item.category}}</h5>
+                                <h3 class="text-uppercase" :class="deviceSize == 'mobile' ? 'h4' : null" v-html="item.title"></h3>
                             </div>
                         </li>
                     </div>
                 </div>
             </div>
         </div>
-        <div ref="porfolioWindow" class="porfolioWindow" v-show="currentProject.length">
-            <svg @click="closeProject" class="d-lg-none" v-if="!vimeoWind" version="1.1" id="closeb" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 41.8 41.8" style="enable-background: new 0 0 41.8 41.8" xml:space="preserve">
+        <div ref="porfolioWindow" class="porfolioWindow px-0" v-show="currentProject.length">
+            <svg @click="closeProject" class="d-lg-none" version="1.1" id="closeb" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 41.8 41.8" style="enable-background: new 0 0 41.8 41.8" xml:space="preserve">
                 <g id="circle" transform="translate(0, 0)">
                     <ellipse transform="matrix(1 -4.136431e-03 4.136431e-z03 1 -8.630285e-02 8.666051e-02)" class="st0" cx="20.9" cy="20.9" rx="20.4" ry="20.4" />
                 </g>
@@ -188,13 +129,7 @@
                     <line class="st1" x1="28.2" y1="13.7" x2="13.7" y2="28.2" />
                 </g>
             </svg>
-            <projectQB :y="y" :x="x" v-if="currentProject == 'quikblocs'" v-on:imgRdy="updateSizes('on')" />
-            <projectMif v-if="currentProject == 'mif'" v-on:openVid="toggleVimeo($event)" v-on:imgRdy="updateSizes('on')" />
-            <projectFS v-if="currentProject == 'futuresessions'" v-on:openVid="toggleVimeo($event)" v-on:imgRdy="updateSizes('on')" />
-            <projectGallery v-if="currentProject == 'gallery'" v-on:imgRdy="updateSizes('on')" />
-            <projectMusic v-if="currentProject == 'music'" v-on:openVid="toggleVimeo($event)" v-on:imgRdy="updateSizes('on')" />
-            <projectPoem v-if="currentProject == 'poem'" v-on:openVid="toggleVimeo($event)" v-on:imgRdy="updateSizes('on')" />
-            <projectEco v-if="currentProject == 'eco'" v-on:openVid="toggleVimeo($event)" v-on:imgRdy="updateSizes('on')" />
+            <projectPage :y="y" :x="x" v-if="currentProject" :projects="projects" :currentProject="currentProject" v-on:imgRdy="updateSizes('on')" />
             <!-- each to be its own dynamic loaded component  -->
         </div>
         <div ref="contact" class="window contact">
@@ -213,24 +148,26 @@ import windowAbout from "./components/windowAbout.vue";
 import windowContact from "./components/windowContact.vue";
 import Smallgraph from "./components/smallgraph.vue";
 import pulseBar from "./components/pulseBar.vue";
-import SceneBackground from './components/sceneBackground.vue';
+var projects = require('@/assets/projects.json');
+var content = require('@/assets/content.json');
 export default {
     name: "App",
     metaInfo() {
         return {
-            title: "Simon G.Proudfoot - Web Developer",
+            title: "Moonshot Web Studio Ltd",
             meta: [
-                { name: 'description', content: 'I am a web developer from Mancheter with almost a decades experience building creative websites and complex web apps, mainly using Vue.js, Laravel, WordPress and jQuery.' },
-                { property: 'og:title', content: "Simon G.Proudfoot - Web Developer" },
-                { property: 'og:site_name', content: 'Simon G.Proudfoo' },
+                { name: 'description', content: 'Moonshot Web Studio Ltd is a creative collective based in Manchester, UK that builds out of this world websites, apps and immersive digital experiences.' },
+                { property: 'og:title', content: "Moonshot Web Studio Ltd" },
+                { property: 'og:site_name', content: 'Moonshot Web Studio Ltd' },
                 { property: 'og:type', content: 'website' },
                 { name: 'robots', content: 'index,follow' }
             ]
         }
     },
-
     data: function () {
         return {
+            projects,
+            content,
             open: {
                 about: false,
                 portfolio: false,
@@ -397,49 +334,33 @@ export default {
         windowContact,
         Smallgraph,
         pulseBar,
-        SceneBackground: () =>
-            import("./components/sceneBackground.vue"),
-        projectMif: () =>
-            import("./components/projectMif.vue"),
-        projectFS: () =>
-            import("./components/projectFS.vue"),
-        projectGallery: () =>
-            import("./components/projectGallery.vue"),
-        projectQB: () =>
-            import("./components/projectQB.vue"),
-        projectMusic: () =>
-            import("./components/projectMusic.vue"),
-        vimeoplayer: () =>
-            import("./components/vimeoplayer.vue"),
-        projectPoem: () =>
-            import("./components/projectPoem.vue"),
-        projectEco: () =>
-            import("./components/projectEco.vue"),
+        SceneBackground: () => import("./components/sceneBackground"),
+        projectPage: () => import("./components/projectPage"),
     },
     methods: {
         modelsLoaded() {
             this.galaxyLoaded = true
         },
-        toggleVimeo(id) {
-            if (!this.vimeoWind) {
-                this.loadingInternal()
-                this.preventScoll(true)
-                this.vimeoWind = true
-                this.vimeoID = id
-                this.windowScale()
-                document
-                    .getElementById("wrapper")
-                    .classList.add("inactiveWrapper");
-            } else {
-                this.preventScoll()
-                this.vimeoWind = false
-                this.vimeoID = ''
-                this.windowScale('full')
-                document
-                    .getElementById("wrapper")
-                    .classList.remove("inactiveWrapper");
-            }
-        },
+        // toggleVimeo(id) {
+        //     if (!this.vimeoWind) {
+        //         this.loadingInternal()
+        //         this.preventScoll(true)
+        //         this.vimeoWind = true
+        //         this.vimeoID = id
+        //         this.windowScale()
+        //         document
+        //             .getElementById("wrapper")
+        //             .classList.add("inactiveWrapper");
+        //     } else {
+        //         this.preventScoll()
+        //         this.vimeoWind = false
+        //         this.vimeoID = ''
+        //         this.windowScale('full')
+        //         document
+        //             .getElementById("wrapper")
+        //             .classList.remove("inactiveWrapper");
+        //     }
+        // },
         loadFin() {
             this.loadSpeed = 'loop 0 0'
             this.tasksDone = 0

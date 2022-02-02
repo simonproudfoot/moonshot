@@ -13,10 +13,9 @@
                 </g>
             </svg>
             <div class="pt-5">
-                <div class="contact-list">
                     <div class="row">
                         <div class="col-8">
-                            <h1 :class="deviceSize == 'mobile' ? 'h2' : null">SEND_SUBSPACE_<br />COMMUNICATION</h1>
+                            <h1 :class="deviceSize == 'mobile' ? 'h2' : null">SEND SUBSPACE <br />COMMUNICATION</h1>
                         </div>
                         <div class="col-4">
                             <div id="soundwave">
@@ -56,17 +55,15 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="col-12">
-                            <p>If you have a project/full-time position available or if you'd just like to say hello. Please send a message and I'll do my best to get back to you immediately.</p>
-
-                           
+                        <div class="col-12 mb-5">
+                            <p>If you have a project in mind or just want to say hello. Please fill in the form below. Please give as much detail about your project as possible</p>
                         </div>
                     </div>
                     <form name="contact" method="POST" @submit.prevent="sendEmail" autocomplete="off">
-                        <input v-model="form.name" label="Email" type="text" placeholder="NAME" name="name" class="mb-3">
-                        <input v-model="form.email" type="email" placeholder="EMAIL_ADDRESS" name="email" class="mb-3">
-                        <textarea v-model="form.message" name="message" id="" cols="30" rows="5" placeholder="MESSAGE"></textarea>
-                     
+                        <input v-model="form.name" label="Email" type="text" placeholder="NAME" name="name" class="mb-4">
+                        <input v-model="form.email" type="email" placeholder="EMAIL_ADDRESS" name="email" class="mb-4">
+                        <textarea v-model="form.message" name="message" id="" cols="30" rows="5" placeholder="MESSAGE" class="mb-4"> </textarea>
+                        <input v-model="form.budget" type="text" placeholder="Project budget" name="budget" class="mb-4">
                         <button class="text-red  sendBtn mt-5" value="transmit" :class="!valid ? 'btnInactive' : 'blinkingText'">TRANSMIT</button>
                     </form>
                 </div>
@@ -92,6 +89,7 @@ export default {
             name: '',
             email: '',
             message: '',
+            budget: ''
         },
     }),
     computed: {
@@ -141,6 +139,5 @@ export default {
 <style>
 .btnInactive {
     opacity: 0.5 !important;
-
 }
 </style>

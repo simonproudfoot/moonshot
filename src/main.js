@@ -5,8 +5,6 @@ Vue.use(Smallgraph)
 Vue.config.productionTip = false
 import VueEllipseProgress from 'vue-ellipse-progress';
 Vue.use(VueEllipseProgress);
-import vueVimeoPlayer from 'vue-vimeo-player'
-Vue.use(vueVimeoPlayer)
  
 import VueMeta from 'vue-meta'
 Vue.use(VueMeta)
