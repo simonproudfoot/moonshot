@@ -156,11 +156,19 @@ export default {
         return {
             title: "Moonshot Web Studio Ltd",
             meta: [
+                { property: 'itemprop:name', content: "Moonshot Web Studio Ltd" },
+                { property: 'itemprop:description', content: "Moonshot Web Studio Ltd is a creative collective based in Manchester, UK that builds out of this world websites, apps and immersive digital experiences." },
+                { property: 'itemprop:image', content: "assets/thumbnail.jpg" },
+
                 { name: 'description', content: 'Moonshot Web Studio Ltd is a creative collective based in Manchester, UK that builds out of this world websites, apps and immersive digital experiences.' },
                 { property: 'og:title', content: "Moonshot Web Studio Ltd" },
                 { property: 'og:site_name', content: 'Moonshot Web Studio Ltd' },
                 { property: 'og:type', content: 'website' },
-                { name: 'robots', content: 'index,follow' }
+                { property: 'og:image', content: 'assets/thumbnail.jpg' },
+
+                { property: 'twitter:title', content: 'Moonshot Web Studio Ltd' },
+                { property: 'twitter:description', content: 'Moonshot Web Studio Ltd is a creative collective based in Manchester, UK that builds out of this world websites, apps and immersive digital experiences.' },
+                { property: 'twitter:card', content: 'summary_large_image' }
             ]
         }
     },
@@ -374,7 +382,7 @@ export default {
                 this.tasksDone = 100
                 if (window.innerWidth > 992) {
                     this.intloader.to(".ep-container", 1, { opacity: 0.4 });
-                    this.intloader.to(".ep-container", 0.5, {opacity: 0, delay: pause });
+                    this.intloader.to(".ep-container", 0.5, { opacity: 0, delay: pause });
                 } else {
                     this.intloader.to(".ep-container", 1, { opacity: 1 });
                     this.intloader.to(".ep-container", 0.5, { opacity: 0, delay: pause });
