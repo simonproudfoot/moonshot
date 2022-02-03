@@ -9,18 +9,6 @@ Vue.use(VueEllipseProgress);
 import VueMeta from 'vue-meta'
 Vue.use(VueMeta)
 
-
-import VueAnalytics from 'vue-analytics';//and then use it in main.js
-
-
-Vue.use(VueAnalytics, {
-  id: 'UA-43668748-1',
-  checkDuplicatedScript: true
-})
-
-
-
-
 new Vue({
   render: (h) => h(App),
   

@@ -11,7 +11,6 @@
                 <small v-else>THANK YOU!</small></p>
         </div>
     </div>
-
     <transition name="fade">
         <div v-if="page == 'mainPanel'" class="back-s">HOME</div>
     </transition>
@@ -37,7 +36,6 @@
                     </g>
                 </svg>
                 <div class="window__wrapper__content ">
-
                     <windowAbout :content="content" />
                 </div>
             </div>
@@ -64,7 +62,6 @@
                                 <img src="./assets/behance.svg" :width="(screenWidth = 'desktop' ? 30 : 48)" height="48" />
                             </a>
                         </div>
-
                         <small class="text-light" style="opacity: 0.4; display: block; line-height: 15px;"> Company Number 13874590.<br />Copyright &copy; {{new Date().getFullYear()}} Moonshot Web Studio Ltd. All Rights Reserved.</small>
                     </div>
                     <div class="socialHud my-5">
@@ -77,8 +74,7 @@
                     <h1 class="titletext mb-sm-0">SPACE AGE WEB <br />TECHNOLOGY</h1>
                     <p class="mb-5 mt-0 mt-md-5 introText">
                         <span v-html="content.introOne"></span>
-
-                        <span v-show="!about" @click="openAbout" class="text-red blinkingText ml-2" style="cursor: pointer">READ_MORE</span>
+                        <span v-show="!about" @click="openAbout" class="text-red blinkingText d-inline-block ml-0 ml-sm-2" style="cursor: pointer">READ_MORE</span>
                     </p>
                     <button @click="openPortfolio()" class="mainBtn d-inline mr-3" :class="page == 'portfolioMenu' ? 'btn--active' : null">
                         WORK
@@ -136,7 +132,6 @@
             <windowContact :deviceSize="deviceSize" v-on:toggle="closeContact" v-on:sending="loadingSprite(2000, true), windowScale()" v-on:sent="windowScale('full')" />
         </div>
     </div>
-
 </div>
 </template>
 
@@ -159,21 +154,17 @@ export default {
                 { name: 'itemprop:name', content: "Moonshot Web Studio Ltd" },
                 { name: 'itemprop:description', content: "Moonshot Web Studio Ltd is a creative collective based in Manchester, UK that builds out of this world websites, apps and immersive digital experiences." },
                 { name: 'itemprop:image', content: "assets/thumbnail.jpg" },
-
                 { name: 'description', content: 'Moonshot Web Studio Ltd is a creative collective based in Manchester, UK that builds out of this world websites, apps and immersive digital experiences.' },
                 { name: 'og:title', content: "Moonshot Web Studio Ltd" },
                 { name: 'og:site_name', content: 'Moonshot Web Studio Ltd' },
                 { name: 'og:type', content: 'website' },
                 { name: 'og:image', content: 'thumbnail.jpg' },
-
                 { name: 'twitter:title', content: 'Moonshot Web Studio Ltd' },
                 { name: 'twitter:description', content: 'Moonshot Web Studio Ltd is a creative collective based in Manchester, UK that builds out of this world websites, apps and immersive digital experiences.' },
                 { name: 'twitter:card', content: 'summary_large_image' }
             ]
         }
     },
-
-    
     data: function () {
         return {
             projects,
@@ -573,7 +564,6 @@ export default {
                     }
                     this.portfolioView.to(".porfolioWindow", 0.8, { opacity: 1, yPercent: 0 })
                     this.portfolioView.addPause("+=0", this.triggerEvent(proj), ["scene3Done"]);
-
                     // }, 500);
                 })
             } else {
@@ -606,10 +596,7 @@ export default {
                 this.windowScale("full");
             }
         },
-
-        stopLoader() {
-
-        },
+        stopLoader() {},
         loadingSprite(time, sending) {
             if (sending) {
                 this.loadMessage = 'SENDING'
@@ -638,7 +625,6 @@ export default {
                 force3D: true,
             });
             this.loading.play();
-
             setTimeout(
                 () => {
                     if (sending) {
@@ -655,7 +641,6 @@ export default {
                         document.getElementById("wrapper").classList.remove("inactiveWrapper");
                         // 
                     }
-
                 }, !time ? 1500 : time
             );
         },
@@ -727,14 +712,12 @@ export default {
         this.sizeCheck();
         this.windowSizes;
         var wait = 100;
-
         if (window.innerWidth > 992) {
             this.loadingSprite(2000, false);
         } else {
             wait = 100;
             this.loadingSprite(2000, false);
         }
-
         this.$ga.page('/homepage');
     },
 };
