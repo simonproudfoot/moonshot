@@ -36,7 +36,7 @@
                         <line class="st1" x1="28.2" y1="13.7" x2="13.7" y2="28.2" />
                     </g>
                 </svg>
-                <div class="window__wrapper__content">
+                <div class="window__wrapper__content ">
 
                     <windowAbout :content="content" />
                 </div>
@@ -373,11 +373,11 @@ export default {
                 this.intloader.play();
                 this.tasksDone = 100
                 if (window.innerWidth > 992) {
-                    this.intloader.to(".ep-container", 1, { scale: 1.4, opacity: 0.4 });
-                    this.intloader.to(".ep-container", 0.5, { scale: 1.2, opacity: 0, delay: pause });
+                    this.intloader.to(".ep-container", 1, { opacity: 0.4 });
+                    this.intloader.to(".ep-container", 0.5, {opacity: 0, delay: pause });
                 } else {
-                    this.intloader.to(".ep-container", 1, { scale: 0.8, opacity: 1 });
-                    this.intloader.to(".ep-container", 0.5, { scale: 0.6, opacity: 0, delay: pause });
+                    this.intloader.to(".ep-container", 1, { opacity: 1 });
+                    this.intloader.to(".ep-container", 0.5, { opacity: 0, delay: pause });
                 }
             }
         },

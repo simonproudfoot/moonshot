@@ -3,7 +3,7 @@
     <div class="row icons mb-5 mt-2 pb-5">
         <div class="col-12 mb-5">
             <div class="px-3">
-                <p v-if="content" lass="px-5 pt-1 mb-5 d-inline-flex">
+                <p v-if="content" class="pt-5 pt-md-1 mb-5 d-inline-flex">
                     <span v-html="content.introTwo"></span>
                 </p>
             </div>

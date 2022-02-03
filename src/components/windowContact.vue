@@ -55,15 +55,16 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="col-12 mb-5">
-                        <p>If you have a project in mind or just want to say hello. Please fill in the form below. Please give as much detail about your project as possible</p>
+                    <div class="col-12 mb-3">
+                        <p>Please fill in the form below if you have project in mind or just want to say hello.</p> 
                     </div>
                 </div>
                 <form name="contact" method="POST" @submit.prevent="sendEmail" autocomplete="off">
                     <input v-model="form.name" label="Email" type="text" placeholder="NAME" name="name" class="mb-4">
                     <input v-model="form.email" type="email" placeholder="EMAIL_ADDRESS" name="email" class="mb-4">
                     <textarea v-model="form.message" name="message" id="" cols="30" rows="5" placeholder="MESSAGE" class="mb-4"> </textarea>
-                    <input v-model="form.budget" type="text" placeholder="Project budget" name="budget" class="mb-4">
+                    <input v-model="form.budget" type="text" placeholder="PROJECT_BUDGET" name="budget" class="mb-4">
+                    <p>Please provide as much detail about your project as possible.</p>
                     <button class="text-red  sendBtn mt-5" value="transmit" :class="!valid ? 'btnInactive' : 'blinkingText'">TRANSMIT</button>
                 </form>
             </div>

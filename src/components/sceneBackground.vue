@@ -188,7 +188,7 @@ export default {
 
 <style scoped>
 #scene-container {
-    height: 100%;
+    height: 100vh;
     width: 100%;
     opacity: 0.6;
     position: fixed;
