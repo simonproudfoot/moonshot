@@ -152,25 +152,53 @@ var projects = require('@/assets/projects.json');
 var content = require('@/assets/content.json');
 export default {
     name: "App",
-    metaInfo() {
-        return {
-            title: "Moonshot Web Studio Ltd",
-            meta: [
-                { name: 'itemprop:name', content: "Moonshot Web Studio Ltd" },
-                { name: 'itemprop:description', content: "Moonshot Web Studio Ltd is a creative collective based in Manchester, UK that builds out of this world websites, apps and immersive digital experiences." },
-                { name: 'itemprop:image', content: "assets/thumbnail.jpg" },
+    // metaInfo() {
+    //     return {
+    //         title: "Moonshot Web Studio Ltd",
+    //         meta: [
+    //             { name: 'itemprop:name', content: "Moonshot Web Studio Ltd" },
+    //             { name: 'itemprop:description', content: "Moonshot Web Studio Ltd is a creative collective based in Manchester, UK that builds out of this world websites, apps and immersive digital experiences." },
+    //             { name: 'itemprop:image', content: "assets/thumbnail.jpg" },
 
-                { name: 'description', content: 'Moonshot Web Studio Ltd is a creative collective based in Manchester, UK that builds out of this world websites, apps and immersive digital experiences.' },
-                { name: 'og:title', content: "Moonshot Web Studio Ltd" },
-                { name: 'og:site_name', content: 'Moonshot Web Studio Ltd' },
-                { name: 'og:type', content: 'website' },
-                { name: 'og:image', content: 'assets/thumbnail.jpg' },
+    //             { name: 'description', content: 'Moonshot Web Studio Ltd is a creative collective based in Manchester, UK that builds out of this world websites, apps and immersive digital experiences.' },
+    //             { name: 'og:title', content: "Moonshot Web Studio Ltd" },
+    //             { name: 'og:site_name', content: 'Moonshot Web Studio Ltd' },
+    //             { name: 'og:type', content: 'website' },
+    //             { name: 'og:image', content: 'assets/thumbnail.jpg' },
 
-                { name: 'twitter:title', content: 'Moonshot Web Studio Ltd' },
-                { name: 'twitter:description', content: 'Moonshot Web Studio Ltd is a creative collective based in Manchester, UK that builds out of this world websites, apps and immersive digital experiences.' },
-                { name: 'twitter:card', content: 'summary_large_image' }
-            ]
-        }
+    //             { name: 'twitter:title', content: 'Moonshot Web Studio Ltd' },
+    //             { name: 'twitter:description', content: 'Moonshot Web Studio Ltd is a creative collective based in Manchester, UK that builds out of this world websites, apps and immersive digital experiences.' },
+    //             { name: 'twitter:card', content: 'summary_large_image' }
+    //         ]
+    //     }
+    // },
+
+    head: {
+        title: {
+            inner: 'Moonshot Web Studio Ltd',
+            complement: 'Space age web technology'
+        },
+        // Meta tags
+        meta: [
+            { name: 'application-name', content: 'Moonshot Web Studio Ltd' },
+            { name: 'description', content: 'Moonshot Web Studio Ltd is a creative collective based in Manchester, UK building out of this world websites, apps and immersive digital experiences.', id: 'desc' }, // id to replace intead of create element
+            // ...
+            // Twitter
+            { name: 'twitter:title', content: 'Moonshot Web Studio Ltd' },
+            // with shorthand
+            { name: 'twitter:description', content: 'Moonshot Web Studio Ltd is a creative collective building out of this world websites, apps and immersive digital experiences.' },
+            // ...
+            // Google+ / Schema.org
+            { itemprop: 'name', content: 'Moonshot Web Studio Ltd' },
+            { itemprop: 'description', content: 'Content Title' },
+            // ...
+            // Facebook / Open Graph
+            { property: 'og:title', content: 'Moonshot Web Studio Ltd' },
+            // with shorthand
+            { property: 'og:image', c: 'assets/thumnail.jpg' },
+            // ...
+        ],
+        // link tags
     },
     data: function () {
         return {

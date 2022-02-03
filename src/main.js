@@ -5,12 +5,10 @@ Vue.use(Smallgraph)
 Vue.config.productionTip = false
 import VueEllipseProgress from 'vue-ellipse-progress';
 Vue.use(VueEllipseProgress);
- 
-import VueMeta from 'vue-meta'
-Vue.use(VueMeta)
-
-
 import VueAnalytics from 'vue-analytics';//and then use it in main.js
+import VueHead from 'vue-head'
+
+Vue.use(VueHead)
 
 
 Vue.use(VueAnalytics, {
@@ -19,11 +17,9 @@ Vue.use(VueAnalytics, {
 })
 
 
-
-
 new Vue({
   render: (h) => h(App),
-  
+
   // Add mounted, or will not perform pre-compilation
   mounted() {
     document.dispatchEvent(new Event('render-event'));
