@@ -64,24 +64,27 @@
                         </div>
                         <small class="text-light" style="opacity: 0.4; display: block; line-height: 15px;"> Company Number 13874590.<br />Copyright &copy; {{new Date().getFullYear()}} Moonshot Web Studio Ltd. All Rights Reserved.</small>
                     </div>
-                    <div class="socialHud my-5">
+                    <!-- <div class="socialHud my-5">
                         <div class="row align-items-center">
                             <div class="col-4">
                                 <img src="./assets/logo.svg" width="172" height="35" />
                             </div>
                         </div>
-                    </div>
-                    <h1 class="titletext mb-sm-0">SPACE AGE WEB <br />TECHNOLOGY</h1>
-                    <p class="mb-5 mt-0 mt-md-5 introText">
-                        <span v-html="content.introOne"></span>
-                        <span v-show="!about" @click="openAbout" class="text-red blinkingText d-inline-block ml-0 ml-sm-2" style="cursor: pointer">READ_MORE</span>
-                    </p>
-                    <button @click="openPortfolio()" class="mainBtn d-inline mr-3" :class="page == 'portfolioMenu' ? 'btn--active' : null">
-                        WORK
-                    </button>
-                    <button @click="openContact()" class="mainBtn d-inline" :class="page == 'contact' ? 'btn--active' : null">
-                        CONTACT
-                    </button>
+                    </div> -->
+                    <span class="centerContentFix">
+                        <img src="./assets/logo.svg" width="172" height="35" class="mb-3" />
+                        <h1 class="titletext mb-sm-0">SPACE AGE WEB <br />TECHNOLOGY</h1>
+                        <p class="mb-5 mt-0 mt-md-5 introText">
+                            <span v-html="content.introOne"></span>
+                            <span v-show="!about" @click="openAbout" class="text-red blinkingText d-inline-block ml-0 ml-sm-2" style="cursor: pointer">READ_MORE</span>
+                        </p>
+                        <button @click="openPortfolio()" class="mainBtn d-inline mr-3" :class="page == 'portfolioMenu' ? 'btn--active' : null">
+                            WORK
+                        </button>
+                        <button @click="openContact()" class="mainBtn d-inline" :class="page == 'contact' ? 'btn--active' : null">
+                            CONTACT
+                        </button>
+                    </span>
                     <smallgraph />
                     <pulseBar />
                     <div ref="about" v-show="about && outerWidth > 576" class="about py-3 px-4">
@@ -726,4 +729,21 @@ export default {
 <style lang="scss">
 @import "assets/css/bootstrap.min.css";
 @import "assets/css/global.scss";
+
+.centerContentFix img {
+    margin-top: 13%;
+}
+
+@media only screen and (min-height: 860px) {
+    .centerContentFix {
+        position: absolute;
+        height: auto;
+        top: 50%;
+        transform: translateY(-50%);
+
+        img {
+            margin-top: 0;
+        }
+    }
+}
 </style>
