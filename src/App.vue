@@ -73,7 +73,7 @@
                     </div> -->
                     <span class="centerContentFix">
                         <img src="./assets/logo.svg" width="172" height="35" class="mb-3" />
-                        <h1 class="titletext mb-sm-0">SPACE AGE WEB <br />TECHNOLOGY</h1>
+                        <h1 class="titletext mb-sm-0 mt-5 mt-md-0">SPACE AGE WEB <br />TECHNOLOGY</h1>
                         <p class="mb-5 mt-0 mt-md-5 introText">
                             <span v-html="content.introOne"></span>
                             <span v-show="!about" @click="openAbout" class="text-red blinkingText d-inline-block ml-0 ml-sm-2" style="cursor: pointer">READ_MORE</span>
