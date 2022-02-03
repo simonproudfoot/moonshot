@@ -156,19 +156,19 @@ export default {
         return {
             title: "Moonshot Web Studio Ltd",
             meta: [
-                { property: 'itemprop:name', content: "Moonshot Web Studio Ltd" },
-                { property: 'itemprop:description', content: "Moonshot Web Studio Ltd is a creative collective based in Manchester, UK that builds out of this world websites, apps and immersive digital experiences." },
-                { property: 'itemprop:image', content: "assets/thumbnail.jpg" },
+                { name: 'itemprop:name', content: "Moonshot Web Studio Ltd" },
+                { name: 'itemprop:description', content: "Moonshot Web Studio Ltd is a creative collective based in Manchester, UK that builds out of this world websites, apps and immersive digital experiences." },
+                { name: 'itemprop:image', content: "assets/thumbnail.jpg" },
 
                 { name: 'description', content: 'Moonshot Web Studio Ltd is a creative collective based in Manchester, UK that builds out of this world websites, apps and immersive digital experiences.' },
-                { property: 'og:title', content: "Moonshot Web Studio Ltd" },
-                { property: 'og:site_name', content: 'Moonshot Web Studio Ltd' },
-                { property: 'og:type', content: 'website' },
-                { property: 'og:image', content: 'assets/thumbnail.jpg' },
+                { name: 'og:title', content: "Moonshot Web Studio Ltd" },
+                { name: 'og:site_name', content: 'Moonshot Web Studio Ltd' },
+                { name: 'og:type', content: 'website' },
+                { pnameroperty: 'og:image', content: 'assets/thumbnail.jpg' },
 
-                { property: 'twitter:title', content: 'Moonshot Web Studio Ltd' },
-                { property: 'twitter:description', content: 'Moonshot Web Studio Ltd is a creative collective based in Manchester, UK that builds out of this world websites, apps and immersive digital experiences.' },
-                { property: 'twitter:card', content: 'summary_large_image' }
+                { name: 'twitter:title', content: 'Moonshot Web Studio Ltd' },
+                { name: 'twitter:description', content: 'Moonshot Web Studio Ltd is a creative collective based in Manchester, UK that builds out of this world websites, apps and immersive digital experiences.' },
+                { pnameroperty: 'twitter:card', content: 'summary_large_image' }
             ]
         }
     },
